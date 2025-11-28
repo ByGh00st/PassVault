@@ -25,7 +25,7 @@
 
 Entegre **Security AI (Gemini)** sayesinde kasanızdaki güvenlik açıklarını analiz eder, size özel tavsiyeler verir ve siber güvenlik dünyasındaki güncel tehditlere karşı sizi uyarır.
 
-![PassVault Screenshot]("https://i.hizliresim.com/s9ft1zl.png")
+![PassVault Screenshot](https://i.hizliresim.com/s9ft1zl.png)
 
 ## 🚀 Key Features
 
