@@ -96,10 +96,10 @@ The system operates under a strict **Zero-Trust & Zero-Knowledge Doctrine**: no 
                      +------------------------+------------------------+
                                               |
                                               v
-                              +-------------------------------+
-                              |     AES-256-GCM AEAD ENVELOPE |
-                              |   [IV_B64] : [CIPHERTEXT_B64] |
-                              +-------------------------------+
+                              +-----------------------------------------------+
+                              |           AES-256-GCM AEAD ENVELOPE           |
+                              | [12-BYTE RAW IV] || [CIPHERTEXT] || [16B TAG] |
+                              +-----------------------------------------------+
 ```
 
 ### 2.1 Symmetric AEAD Primitive: `AES-256-GCM`
@@ -107,14 +107,14 @@ Every individual field within a vault item is independently encrypted using **AE
 * **Key Size:** 256 bits (32 octets).
 * **Initialization Vector (IV / Nonce):** 96 bits (12 octets) sourced via OS-level CSPRNG (`window.crypto.getRandomValues` in WebCrypto / `rand::rngs::OsRng` in Rust).
 * **Authentication Tag:** 128 bits (16 octets) GHASH tag appended to ciphertext to enforce tamper detection.
-* **Payload Format:** `[IV_Base64] : [Ciphertext_With_Tag_Base64]`
+* **Pure Binary Payload Format:** `[12-Byte Raw IV] || [Raw Ciphertext Bytes (N Octets)] || [16-Byte Raw GHASH Tag]`
 
 ```
-+-------------------+---------------------------------------+-----------------------+
-|  IV (12 Octets)   |      Ciphertext Payload (N Octets)    | GHASH Tag (16 Octets) |
-+-------------------+---------------------------------------+-----------------------+
-|  Base64 Part 0    |                  Base64 Part 1                                |
-+-------------------+---------------------------------------------------------------+
++---------------------+---------------------------------------+-----------------------+
+|  RAW IV (12 Octets) |      RAW CIPHERTEXT BYTES (N Octets)  | GHASH TAG (16 Octets) |
++---------------------+---------------------------------------+-----------------------+
+|  Bytes 0x00 - 0x0B  |            Bytes 0x0C - 0x0C+N-1      |  Final 16 Octets      |
++---------------------+---------------------------------------+-----------------------+
 ```
 
 ### 2.2 Key Derivation Function (KDF) Specifications
@@ -132,7 +132,7 @@ Every individual field within a vault item is independently encrypted using **AE
 ### 2.3 Single-Pass Master KDF Derivation Architecture
 Legacy vault architectures invoke KDF derivations per item, causing catastrophic CPU and RAM spikes (e.g., 50 items $\times$ 7 fields = 350 Argon2 derivations = 22 GB RAM spike). 
 
-PassVault++ implements an **Isolated Single-Pass KDF Pipeline**:
+PassVault implements an **Isolated Single-Pass KDF Pipeline**:
 1. When unlocking, KDF derivation executes **exactly once**, generating the master `CryptoKey`.
 2. All field decryptions execute as lightweight AES-GCM operations against the derived key in parallel ($\approx 0.02\text{ ms}$ per field).
 3. RAM consumption remains strictly flat ($< 45\text{ MB}$ total footprint).
@@ -510,7 +510,16 @@ npm run tauri build
 
 ---
 
+## 15. DEVELOPER & PROJECT CONTACT
+
 <div align="center">
-  <b>PASSVAULT++ // SOVEREIGN SECURITY KERNEL</b><br>
-  <i>Engineered for Absolute Zero-Knowledge Operational Dominance</i>
+  <p>
+    <a href="https://byghost.tr"><img src="https://img.shields.io/badge/Website-byghost.tr-00f5d4.svg?style=for-the-badge&logo=google-chrome&logoColor=black" alt="Website" /></a>
+    <a href="https://github.com/ByGh00st"><img src="https://img.shields.io/badge/Developer-ByGhost-6366f1.svg?style=for-the-badge&logo=github" alt="Developer" /></a>
+    <a href="https://github.com/ByGh00st/PassVault"><img src="https://img.shields.io/badge/Repository-PassVault-ec4899.svg?style=for-the-badge&logo=git" alt="Repository" /></a>
+  </p>
+  <br />
+  <b>Developed with Sovereign Technical Rigor by <a href="https://byghost.tr">ByGhost</a></b><br />
+  <i>Air-Gapped Cryptographic Security & Kernel Engineering</i><br />
+  <span>Official Web: <a href="https://byghost.tr">https://byghost.tr</a> | Source: <a href="https://github.com/ByGh00st/PassVault">github.com/ByGh00st/PassVault</a></span>
 </div>
