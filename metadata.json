@@ -1,5 +1,23 @@
 {
-  "name": "PassVault",
-  "description": "A secure, modern password manager featuring AES-256 encryption, password strength analysis, and an AI-powered security assistant.",
+  "name": "PassVault++ Omega",
+  "version": "1.0.0",
+  "description": "Sovereign zero-knowledge cryptographic vault & Ring-3 kernel citadel featuring AES-256-GCM AEAD, Argon2id/PBKDF2 KDF, VirtualLock physical RAM pinning, Windows DPAPI/TPM 2.0 binding, Pure Binary .pvdb v1.0 storage, and Anti-Keylogger scrambled virtual matrix.",
+  "developer": "ByGhost",
+  "website": "https://byghost.tr",
+  "repository": "https://github.com/ByGh00st/PassVault",
+  "license": "MIT",
+  "tags": [
+    "zero-knowledge",
+    "password-manager",
+    "aes-256-gcm",
+    "argon2id",
+    "tauri",
+    "rust",
+    "react",
+    "windows-hello",
+    "anti-keylogger",
+    "glassmorphism",
+    "cybersecurity"
+  ],
   "requestFramePermissions": []
 }
