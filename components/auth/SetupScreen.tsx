@@ -65,7 +65,7 @@ export const SetupScreen: React.FC<SetupScreenProps> = ({ onSetup }) => {
           <div className="w-16 h-16 bg-gradient-to-br from-indigo-600 to-cyan-600 rounded-2xl flex items-center justify-center mb-4 shadow-xl shadow-indigo-500/20 border border-white/20">
             <ShieldCheck size={32} className="text-white" />
           </div>
-          <h1 className="text-xl font-bold text-white tracking-widest">OMEGA VAULT SETUP</h1>
+          <h1 className="text-xl font-bold text-white tracking-widest">PASSVAULT SETUP</h1>
           <p className="text-slate-400 text-xs mt-1">// ZERO-KNOWLEDGE MASTER CIPHER INITIALIZATION</p>
         </div>
 

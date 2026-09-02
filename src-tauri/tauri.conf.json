@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/tauri-apps/tauri/dev/tooling/cli/schema.json",
   "package": {
-    "productName": "PassVault Omega",
+    "productName": "PassVault",
     "version": "1.0.0"
   },
   "build": {
@@ -30,7 +30,7 @@
       "category": "DeveloperTool",
       "copyright": "ByGhost",
       "identifier": "com.byghost.passvault",
-      "shortDescription": "PassVault Omega Sovereign Cryptographic Core",
+      "shortDescription": "PassVault Sovereign Cryptographic Core",
       "targets": "all",
       "icon": [
         "icons/32x32.png",
@@ -48,7 +48,7 @@
         "fullscreen": false,
         "height": 760,
         "resizable": true,
-        "title": "PassVault Omega",
+        "title": "PassVault",
         "width": 1180
       }
     ]

@@ -343,7 +343,7 @@ export const App: React.FC = () => {
         const url = URL.createObjectURL(blob);
         const link = document.createElement('a');
         link.href = url;
-        link.download = `passvault_omega_${new Date().toISOString().slice(0, 10)}.pvdb`;
+        link.download = `passvault_backup_${new Date().toISOString().slice(0, 10)}.pvdb`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

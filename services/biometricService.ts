@@ -1,6 +1,6 @@
 /**
  * ==============================================================================
- * PASSVAULT++ OMEGA BIOMETRIC & WEBAUTHN HARDWARE BRIDGE
+ * PASSVAULT BIOMETRIC & WEBAUTHN HARDWARE BRIDGE
  * ==============================================================================
  * Connects directly to Windows Hello, Touch ID, Face ID, and TPM 2.0 FIDO2
  * Authenticators to provide Zero-Keystroke Hardware Authentication.
@@ -9,8 +9,8 @@
 
 const BIOMETRIC_CRED_KEY = 'pv_biometric_cred_id';
 const BIOMETRIC_CHALLENGE = new Uint8Array([
-  0x50, 0x61, 0x73, 0x73, 0x56, 0x61, 0x75, 0x6c, 0x74, 0x4f, 0x6d, 0x65, 0x67, 0x61, 0x32, 0x36
-]); // "PassVaultOmega26"
+  0x50, 0x61, 0x73, 0x73, 0x56, 0x61, 0x75, 0x6c, 0x74, 0x56, 0x61, 0x75, 0x6c, 0x74, 0x32, 0x36
+]); // "PassVaultVault26"
 
 /**
  * Checks if Windows Hello / Platform Biometrics is supported on this machine
@@ -48,7 +48,7 @@ export const registerBiometric = async (displayName: string): Promise<boolean> =
   const publicKeyCredentialCreationOptions: PublicKeyCredentialCreationOptions = {
     challenge: BIOMETRIC_CHALLENGE,
     rp: {
-      name: "PassVault++ Omega",
+      name: "PassVault",
       id: window.location.hostname || "localhost"
     },
     user: {

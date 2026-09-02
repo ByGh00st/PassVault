@@ -1,5 +1,5 @@
 {
-  "name": "PassVault++ Omega",
+  "name": "PassVault",
   "version": "1.0.0",
   "description": "Sovereign zero-knowledge cryptographic vault & Ring-3 kernel citadel featuring AES-256-GCM AEAD, Argon2id/PBKDF2 KDF, VirtualLock physical RAM pinning, Windows DPAPI/TPM 2.0 binding, Pure Binary .pvdb v1.0 storage, and Anti-Keylogger scrambled virtual matrix.",
   "developer": "ByGhost",

@@ -1,13 +1,13 @@
-# PASSVAULT++ // OMEGA PROTOCOL
+# PASSVAULT
 ### Sovereign Zero-Knowledge Cryptographic Vault & Ring-3 Kernel Citadel
 
 ```
- ██████╗  █████╗ ███████╗███████╗██╗   ██╗ █████╗ ██╗   ██╗██╗  ████████╗   ██╗   ██╗
- ██╔══██╗██╔══██╗██╔════╝██╔════╝██║   ██║██╔══██╗██║   ██║██║  ╚══██╔══╝ ████████████╗
- ██████╔╝███████║███████╗███████╗██║   ██║███████║██║   ██║██║     ██║    ╚═██╔═██╔═══╝
- ██╔═══╝ ██╔══██║╚════██║╚════██║╚██╗ ██╔╝██╔══██║██║   ██║██║     ██║    ███████████╗ 
- ██║     ██║  ██║███████║███████║ ╚████╔╝ ██║  ██║╚██████╔╝███████╗██║    ╚██╔═██╔═══╝ 
- ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝  ╚═══╝  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝     ╚═╝ ╚═╝     
+ ██████╗  █████╗ ███████╗███████╗██╗   ██╗ █████╗ ██╗   ██╗██╗  ████████╗
+ ██╔══██╗██╔══██╗██╔════╝██╔════╝██║   ██║██╔══██╗██║   ██║██║  ╚══██╔══╝
+ ██████╔╝███████║███████╗███████╗██║   ██║███████║██║   ██║██║     ██║   
+ ██╔═══╝ ██╔══██║╚════██║╚════██║╚██╗ ██╔╝██╔══██║██║   ██║██║     ██║   
+ ██║     ██║  ██║███████║███████║ ╚████╔╝ ██║  ██║╚██████╔╝███████╗██║   
+ ╚═╝     ╚═╝  ╚═╝╚══════╝╚══════╝  ╚═══╝  ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝   
  [ SOVEREIGN ZERO-KNOWLEDGE CRYPTOGRAPHIC ENGINE & NATIVE CITADEL // v1.0.0 ]
 ```
 
@@ -23,7 +23,7 @@
 
 ## 1. EXECUTIVE SUMMARY & SECURITY PARADIGM
 
-PassVault++ (Omega Protocol) is an air-gapped, zero-knowledge credentials vault engineered with a dual-layer cryptographic architecture. It pairs an ultra-responsive **React 18 TypeScript frontend** with a hardware-hardened **Rust Native Ring-3 Citadel backend**. 
+PassVault is an air-gapped, zero-knowledge credentials vault engineered with a dual-layer cryptographic architecture. It pairs an ultra-responsive **React 18 TypeScript frontend** with a hardware-hardened **Rust Native Ring-3 Citadel backend**. 
 
 The system operates under a strict **Zero-Trust & Zero-Knowledge Doctrine**: no cryptographic master keys, unencrypted credentials, or plaintext metadata ever touch non-volatile storage, network interfaces, or unmanaged heap allocations.
 

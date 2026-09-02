@@ -32,8 +32,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
           <ShieldCheck className="text-white" size={20} />
         </div>
         <div className="hidden lg:block min-w-0 font-mono">
-          <h1 className="font-bold text-sm text-white tracking-widest">GHOST</h1>
-          <span className="text-[9px] text-cyan-400 tracking-wider">// OMEGA PROTOCOL</span>
+          <h1 className="font-bold text-sm text-white tracking-widest">PASSVAULT</h1>
+          <span className="text-[9px] text-cyan-400 tracking-wider">// SECURE VAULT</span>
         </div>
       </div>
 

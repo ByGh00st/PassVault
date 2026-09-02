@@ -235,7 +235,7 @@ export const UnlockScreen: React.FC<UnlockScreenProps> = ({ onUnlock, onReset })
 
         {/* Footer */}
         <div className="pt-4 border-t border-white/5 flex items-center justify-between text-[10px] text-slate-500">
-          <span>PASSVAULT++ OMEGA</span>
+          <span>PASSVAULT</span>
           <button 
             type="button"
             onClick={onReset} 
