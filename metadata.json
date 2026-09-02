@@ -1,0 +1,5 @@
+{
+  "name": "PassVault",
+  "description": "A secure, modern password manager featuring AES-256 encryption, password strength analysis, and an AI-powered security assistant.",
+  "requestFramePermissions": []
+}

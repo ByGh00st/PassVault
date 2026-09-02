@@ -1,0 +1,56 @@
+{
+  "$schema": "https://raw.githubusercontent.com/tauri-apps/tauri/dev/tooling/cli/schema.json",
+  "package": {
+    "productName": "PassVault Omega",
+    "version": "1.0.0"
+  },
+  "build": {
+    "distDir": "../dist",
+    "devPath": "http://localhost:1420",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      },
+      "path": {
+        "all": true
+      },
+      "fs": {
+        "all": true,
+        "scope": ["$APPDATA/**", "$HOME/**"]
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "DeveloperTool",
+      "copyright": "ByGhost",
+      "identifier": "com.byghost.passvault",
+      "shortDescription": "PassVault Omega Sovereign Cryptographic Core",
+      "targets": "all",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "windows": [
+      {
+        "fullscreen": false,
+        "height": 760,
+        "resizable": true,
+        "title": "PassVault Omega",
+        "width": 1180
+      }
+    ]
+  }
+}

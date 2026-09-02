@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Courier+Prime:wght@400;700&display=swap');
+
+/* Default Theme Base Tokens */
+:root {
+  --color-background: 2 6 23;      /* Slate 950 */
+  --color-surface: 15 23 42;       /* Slate 900 */
+  --color-surface-light: 30 41 59; /* Slate 800 */
+  --color-primary: #6366f1;        /* Indigo 500 */
+  --color-accent: #06b6d4;         /* Cyan 500 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: rgb(var(--color-background));
+  color: #f8fafc;
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3D Perspective & Flip Utilities */
+.perspective-1000 {
+  perspective: 1200px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* OCR Font for Credit Cards */
+.font-ocr {
+  font-family: 'Courier Prime', 'JetBrains Mono', monospace;
+  letter-spacing: 0.18em;
+}
+
+/* Custom Cyber Scrollbar */
+.custom-scrollbar::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track,
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-4px); }
+  40%, 80% { transform: translateX(4px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-shake {
+  animation: shake 0.35s ease-in-out forwards;
+}
